@@ -14,5 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/forms/certificates', [FormController::class, 'certificates']);
 Route::get('/forms/trucking-quick-quote', [FormController::class, 'truckingQuickQuote']);
