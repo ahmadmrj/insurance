@@ -1,6 +1,6 @@
-@extends('master')
+@extends('layouts.app')
 
-@section('title', "Certificate")
+@section('title', "TRUCKING QUICK QUOTE")
 
 @section('content')
     <p>This is my body content.</p>
