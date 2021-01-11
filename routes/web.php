@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/forms/trucking-quick-quote', [FormController::class, 'truckingQuickQuote']);
+Route::post('/forms/trucking-quick-quote', [FormController::class, 'submitQuote']);
