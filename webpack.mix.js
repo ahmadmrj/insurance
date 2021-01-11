@@ -12,7 +12,9 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('node_modules/mdbootstrap/js/mdb.js', 'public/js')
-    .copy('node_modules/mdbootstrap/css/mdb.css', 'resources/css/mdb.css')
-    .sass('resources/css/app.scss', 'public/css')
-    .styles(['resources/css/mdb.css', 'public/css/app.css'], 'public/css/app.css');
+    // .js('node_modules/popper.js/dist/popper.js', 'public/js')
+    // .js('node_modules/jquery/dist/jquery.js', 'public/js')
+    // .js(['node_modules/bootstrap/js/dist/alert.js', 'node_modules/bootstrap/js/dist/button.js', 'node_modules/bootstrap/js/dist/collapse.js', 'node_modules/bootstrap/js/dist/dropdown.js', 'node_modules/bootstrap/js/dist/modal.js', 'node_modules/bootstrap/js/dist/tab.js', 'node_modules/bootstrap/js/dist/tooltip.js'], 'public/js/bootstrap.js')
+    .sass('resources/sass/app.scss', 'public/css')
+    // .sass('node_modules/bootstrap/scss/bootstrap.scss', 'public/css')
+    // .styles(['public/css/bootstrap.css', 'public/css/app.css'], 'public/css/app.css');
