@@ -43,10 +43,12 @@ class FormService
         }
 
         if (isset($data)) {
-            FormsData::insert($data);
+            if ($model = FormsData::insert($data)) {
+                return $userId;
+            }
         }
 
-        return $formData;
+        return false;
     }
 
     public function getFormByName($name)

@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Forms;
+use App\Services\FormDataService;
 use Illuminate\Http\Request;
-use App\Models\States;
 use App\Services\FormService;
-use FormQuote;
 
 class FormController extends Controller
 {
@@ -19,8 +17,28 @@ class FormController extends Controller
 
     public function submitQuote(Request $request, FormService $formService)
     {
-        $formData = $request->all();
+        if (!$userId = $formService->save($request->all())) {
+            abort(500);
+        }
+
+        $hash = base64_encode(serialize(['user' => $userId]));
         
-        return view("FormQuotePrint2", $formService->save($formData));
+        return view("FormSubmitted", ['url' => url("/view/{$hash}")]);
+    }
+
+    public function viewForm(FormDataService $formDataService, $hash)
+    {
+        $data = @unserialize(base64_decode($hash));
+        if ($data === false || !isset($data['user'])) {
+            abort(404);
+        }
+
+        $elements = $formDataService->getByUserId($data['user']);
+        
+        if (empty($elements)) {
+            abort(404);
+        }
+
+        return view("FormQuotePrint", ['elements' => $elements]);
     }
 }

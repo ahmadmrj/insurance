@@ -13,11 +13,11 @@ $typeOptions = json_decode($fields[1]->values, true);
     </div>
     <div class="col-sm">
         <label>{{$fields[2]->alias}}</label>
-        <input name="{{$fields[2]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[2]->name}}" type="text" class="form-control" data-provide="datepicker" />
     </div>
     <div class="col-sm">
         <label>{{$fields[3]->alias}}</label>
-        <input name="{{$fields[3]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[3]->name}}" type="text" class="form-control" data-provide="datepicker" />
     </div>
 </div>
 
@@ -46,3 +46,12 @@ $typeOptions = json_decode($fields[1]->values, true);
         <input name="{{$fields[8]->name}}" type="text" class="form-control" />
     </div>
 </div>
+
+@section('scripts')
+<script language="text/javascript">
+$('.datepicker').datepicker({
+    format: 'mm/dd/yyyy',
+    startDate: '-3d'
+});
+</script>
+@endsection

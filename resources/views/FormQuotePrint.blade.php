@@ -4,6 +4,34 @@
 
 @section('content')
 
+<?php
+// Vehicles
+$vehicles = [];
+foreach ($elements['vehicle'] as $row) {
+    $rowCount = count($row);
+    break;
+}
+
+for ($i = 0; $i < $rowCount; $i++) {
+    foreach ($elements['vehicle'] as $col => $val) {
+        $vehicles[$i][$col] = $val[$i] ?? null;                
+    }
+}
+
+// Drivers
+$drivers = [];
+foreach ($elements['driver'] as $row) {
+    $rowCount = count($row);
+    break;
+}
+
+for ($i = 0; $i < $rowCount; $i++) {
+    foreach ($elements['driver'] as $col => $val) {
+        $drivers[$i][$col] = $val[$i] ?? null;                
+    }
+}
+?>
+
 <div class="print_area">
 
     <header class="row">
@@ -30,10 +58,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>EMAIL</td>
-                        <td>RAYZA</td>
-                        <td>07/22/2020</td>
-                        <td>06/24/2020</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>{{$elements[2]->value ?? null}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -53,10 +81,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>ARAM GABRIELIAN</td>
-                        <td>BEST MATERIAL TRANSPORT</td>
-                        <td>4</td>
-                        <td>4</td>
+                        <?php $fullName = ($elements[4]->value ?? null) . " " . ($elements[5]->value ?? null) . " " . ($elements[6]->value ?? null); ?>
+                        <td>{{$fullName}}</td>
+                        <td>{{$elements[14]->value ?? null}}</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                     <tr class="thead">
                         <td>Operations</td>
@@ -64,55 +93,57 @@
                         <td colspan="2">Email Address</td>
                     </tr>
                     <tr>
-                        <td>TRUCKING</td>
-                        <td>818-823-3353</td>
-                        <td colspan="2">GAB_ARAM@YAHOO.COM</td>
+                        <td>--</td>
+                        <td>{{$elements[7]->value ?? null}}</td>
+                        <td colspan="2">{{$elements[8]->value ?? null}}</td>
                     </tr>
                     <tr class="thead">
                         <td class="no-pad">
                             <table class="table table-bordered">
                                 <thead>
-                                    <tr class="no-bordered">
+                                    <tr>
                                         <td>DOT#</td>
                                         <td>MC#</td>
                                         <td>CA#</td>
                                     </tr>
                                 </thead>
-                            </table>
-                        </td>
-                        <td>SSN / FEIN</td>
-                        <td colspan="2" class="no-pad">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr class="no-bordered">
-                                        <td>For Hire</td>
-                                        <td>Private</td>
-                                        <td>Non-Trucking</td>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="no-pad">
-                            <table class="table table-bordered">
                                 <tbody>
-                                    <tr class="no-bordered">
-                                        <td>DOT#</td>
-                                        <td>MC#</td>
-                                        <td>CA#</td>
+                                    <tr class="no-border-b">
+                                        <td>{{$elements[20]->value ?? null}}</td>
+                                        <td>{{$elements[22]->value ?? null}}</td>
+                                        <td>{{$elements[21]->value ?? null}}</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </td>
-                        <td>SSN / FEIN</td>
                         <td colspan="2" class="no-pad">
                             <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <td>SSN / FEIN</td>
+                                    </tr>
+                                </thead>
                                 <tbody>
-                                    <tr class="no-bordered">
+                                    <tr>
+                                        <td>--</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="no-pad">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
                                         <td>For Hire</td>
                                         <td>Private</td>
                                         <td>Non-Trucking</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -123,33 +154,33 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <td colspan="2">Street</td>
-                                        <td>City</td>
+                                        <td colspan="2" style="width:33%">Street</td>
+                                        <td style="width:15%">City</td>
                                         <td>State</td>
-                                        <td>Zip</td>
+                                        <td style="width:15.8%">Zip</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="thead">Mailing:</td>
-                                        <td>11242 EMELITA ST APT D</td>
-                                        <td>NORTH HOLLYWOOD</td>
-                                        <td>CA</td>
-                                        <td>91601</td>
+                                        <td class="thead"  style="width:10%">Mailing:</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
                                     </tr>
                                     <tr>
                                         <td class="thead">Physical:</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
                                     </tr>
                                     <tr>
                                         <td class="thead">Garaging:</td>
-                                        <td>17524 SIERRA HWY</td>
-                                        <td>SANTA CLARITA </td>
-                                        <td>CA</td>
-                                        <td>91351</td>
+                                        <td>{{$elements[15]->value ?? null}}</td>
+                                        <td>--</td>
+                                        <td>{{$elements[16]->value ?? null}}</td>
+                                        <td>{{$elements[17]->value ?? null}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -216,10 +247,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>SAND AND GRAVEL</td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td>{{$elements[26]->value ?? null}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -246,19 +274,21 @@
                         <td>Accident(s)</td>
                         <td>Violation(s)</td>
                     </tr>
-                    @for ($i = 0; $i < 3; $i++)
+
+                    @foreach($drivers as $driver)
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <?php $fullName = ($driver[42]->value ?? null) . " " . ($driver[43]->value ?? null); ?>
+                        <td>{{$fullName}}</td>
+                        <td>{{$driver[44]->value ?? null}}</td>
+                        <td>{{$driver[45]->value ?? null}}</td>
+                        <td>{{$driver[46]->value ?? null}}</td>
+                        <td>{{$driver[47]->value ?? null}}</td>
+                        <td>{{$driver[48]->value ?? null}}</td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
-                    @endfor
+                    @endforeach
                 </tbody>
             </table>
         </article>
@@ -269,7 +299,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td colspan="7">SCHEDULE OF VEHICLES </td>
+                        <td colspan="7">SCHEDULE OF VEHICLES</td>
                     </tr>
                     <tr>
                         <td>Year</td>
@@ -282,17 +312,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @for ($i = 0; $i < 5; $i++)
+                    @foreach($vehicles as $vehicle)
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{$vehicle[35]->value ?? null}}</td>
+                        <td>{{$vehicle[36]->value ?? null}}</td>
+                        <td>{{$vehicle[37]->value ?? null}}</td>
+                        <td>{{$vehicle[38]->value ?? null}}</td>
+                        <td>{{$vehicle[39]->value ?? null}}</td>
+                        <td>{{$vehicle[40]->value ?? null}}</td>
+                        <td>{{$vehicle[41]->value ?? null}}</td>
                     </tr>
-                    @endfor
+                    @endforeach
                 </tbody>
             </table>
         </article>
@@ -403,5 +433,13 @@
         <button class="btn btn-success">PRINT</button>
     </p>
 </div>
+@endsection
 
+
+@section('scripts')
+<script type="text/javascript">
+$('.print-btn .btn').click(function(){
+    window.print();
+});
+</script>
 @endsection

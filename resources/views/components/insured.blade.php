@@ -40,7 +40,7 @@
         <label>{{$fields[16]->alias}}</label>
         <select name="{{$fields[16]->name}}" class="form-select">
             @foreach (json_decode($fields[16]->values, true) as $key => $val)
-            <option value="{{$key}}">{{$val}}</option>
+            <option value="{{$val}}">{{$val}}</option>
             @endforeach
         </select>
     </div>
@@ -52,14 +52,16 @@
         <label>{{$fields[18]->alias}}</label>
         <select name="{{$fields[18]->name}}" class="form-select">
             @foreach (json_decode($fields[18]->values, true) as $key => $val)
-            <option value="{{$key}}">{{$val}}</option>
+            <option value="{{$val}}">{{$val}}</option>
             @endforeach
         </select>
     </div>
     <div class="col-sm">
         <label>{{$fields[19]->alias}}</label>
         <select name="{{$fields[19]->name}}" class="form-select">
-            <option value="1">Select one</option>
+            @foreach (json_decode($fields[19]->values, true) as $key => $val)
+            <option value="{{$val}}">{{$val}}</option>
+            @endforeach
         </select>
     </div>
 </div>
