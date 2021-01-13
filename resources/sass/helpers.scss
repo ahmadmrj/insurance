@@ -1,0 +1,31 @@
+@import "variables";
+
+.no-pad {
+    padding: 0 !important;
+}
+
+.no-bordered {
+    border: none;
+}
+
+.no-bordered-b {
+    border-bottom: none;
+}
+
+.btn-xsm {
+    font-size: 8pt;
+    padding: 0px 4px;
+    margin-left: 5px;
+}
+
+.btn-remove {
+    font-size: 12pt;
+    color: $color-red;
+    cursor: pointer;
+}
+
+.d-flex {
+    .btn-remove {
+        margin-top: 30px;
+    }
+}

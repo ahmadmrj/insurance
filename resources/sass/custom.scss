@@ -89,7 +89,7 @@ body {
         td {
             padding: 3px 10px;
             text-align: center;
-            height: 20px;
+            height: 27px;
             vertical-align: middle;
             p {
                 min-height: 22px;
@@ -119,21 +119,15 @@ body {
                     border-right-color: transparent;
                 }
             }
+            tr {
+                border-bottom: 0;
+            }
         }
     }
     .print-btn {
         margin-top: 50px;
         text-align: center;
     }
-}
-
-// Helpers
-.no-pad {
-    padding: 0 !important;
-}
-
-.no-bordered {
-    border: none;
 }
 
 // Media styles
@@ -146,17 +140,13 @@ body {
         margin: 0;
         padding: 0;
         @include box-shadow(0 0 0 transparent);   
-        table {
-            td {
-                height: 18px;
-            }
-        }
         .print-btn {
             display: none;
         }
         .table {
             td {
                 padding: 0px 10px;
+                height: 18px !important;
             }
         }
         .address {

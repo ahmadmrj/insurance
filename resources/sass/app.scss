@@ -1,5 +1,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import "bootstrap-datepicker";
+
+// Success page
+@import "success";
 
 // Custom styles
+@import "helpers";
 @import "custom";
