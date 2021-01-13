@@ -16,17 +16,30 @@ class FormService
 
     public function save(Array $formData)
     {
-        $userId = $this->generateId();
+        $userId    = $this->generateId();
+        $createdAt = new \DateTime();
+        $row       = array_values($formData)[1];
 
-        foreach ($formData as $key => $val) {
-            if (preg_match('/[0-9]+$/', $key, $match)) {
-                $data[] = [
-                    'form_id' => $match[0],
-                    'user_id' => $userId,
-                    'value'   => json_encode($val),
-                    'created_at' => new \DateTime()
-                ];
+        foreach ($row as $key => $item) {
+            if (is_array($item)) {
+                $item = array_values($item)[0];
+                foreach ($item as $val) {
+                    $data[] = [
+                        'form_id'    => $key,
+                        'user_id'    => $userId,
+                        'value'      => json_encode($val),
+                        'created_at' => $createdAt
+                    ];        
+                }
+                continue;
             }
+
+            $data[] = [
+                'form_id'    => $key,
+                'user_id'    => $userId,
+                'value'      => json_encode($item),
+                'created_at' => $createdAt
+            ];
         }
 
         if (isset($data)) {
@@ -42,7 +55,7 @@ class FormService
         $result     = $this->model->newQuery()->where('template', $name)->get();
 
         foreach ($result as $field) {
-            $field->name            = $field->template . '_' . $field->id;
+            $field->name            = $field->template . '[' . $field->id . ']';
             $field->name            .= $field->multiple ? '[' . $field->group_id . '][]' : ''; 
             $formFields[$field->id] = $field;
         }
