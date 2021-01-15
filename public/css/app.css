@@ -13483,10 +13483,21 @@ body {
   margin-top: 10px;
 }
 
+.form-wrapper .title.main {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
 .form-wrapper .form-group label {
   margin-top: 15px;
   color: #818181;
   text-transform: uppercase;
+}
+
+.form-wrapper .form-group label.error {
+  color: #8d030f;
+  margin-top: 4px;
+  text-transform: initial;
 }
 
 .subsection .title {

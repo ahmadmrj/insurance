@@ -5,26 +5,26 @@ $radiusOfOperation = json_decode($fields[28]->values, true);
 <div class="form-group row">
     <div class="col-sm">
         <label>{{$fields[20]->alias}}</label>
-        <input name="{{$fields[20]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[20]->name}}" type="number" class="form-control" />
     </div>
     <div class="col-sm">
         <label>{{$fields[21]->alias}}</label>
-        <input name="{{$fields[21]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[21]->name}}" type="number" class="form-control" />
     </div>
     <div class="col-sm">
         <label>{{$fields[22]->alias}}</label>
-        <input name="{{$fields[22]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[22]->name}}" type="number" class="form-control" />
     </div>
 </div>
 
 <div class="form-group row">
     <div class="col-sm">
         <label>{{$fields[23]->alias}}</label>
-        <input name="{{$fields[23]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[23]->name}}" type="number" class="form-control" />
     </div>
     <div class="col-sm">
         <label>{{$fields[24]->alias}}</label>
-        <input name="{{$fields[24]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[24]->name}}" type="number" class="form-control" />
     </div>
 </div>
 

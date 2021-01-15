@@ -13,18 +13,24 @@ $typeOptions = json_decode($fields[1]->values, true);
     </div>
     <div class="col-sm">
         <label>{{$fields[2]->alias}}</label>
-        <input name="{{$fields[2]->name}}" type="text" class="form-control" data-provide="datepicker" />
+        <div class="input-group">
+            <input name="{{$fields[2]->name}}" type="text" class="form-control" data-provide="datepicker" />
+            <span class="input-group-text"><i class="bi-calendar-date"></i></span>
+        </div>
     </div>
     <div class="col-sm">
         <label>{{$fields[3]->alias}}</label>
-        <input name="{{$fields[3]->name}}" type="text" class="form-control" data-provide="datepicker" />
+        <div class="input-group">
+            <input name="{{$fields[3]->name}}" type="text" class="form-control" data-provide="datepicker" />
+            <span class="input-group-text"><i class="bi-calendar-date"></i></span>
+        </div>
     </div>
 </div>
 
 <div class="form-group row">
     <div class="col-sm">
         <label>{{$fields[4]->alias}}</label>
-        <input name="{{$fields[4]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[4]->name}}" type="text" class="form-control" required />
     </div>
     <div class="col-sm">
         <label>{{$fields[5]->alias}}</label>
@@ -32,26 +38,23 @@ $typeOptions = json_decode($fields[1]->values, true);
     </div>
     <div class="col-sm">
         <label>{{$fields[6]->alias}}</label>
-        <input name="{{$fields[6]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[6]->name}}" type="text" class="form-control" required />
     </div>
 </div>
 
 <div class="form-group row">
     <div class="col-sm">
         <label>{{$fields[7]->alias}}</label>
-        <input name="{{$fields[7]->name}}" type="text" class="form-control" placeholder="e.g 2224448888" />
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi-telephone"></i></span>
+            <input name="{{$fields[7]->name}}" type="text" class="form-control phone_us" placeholder="e.g (424) 542 2220" required />
+        </div>
     </div>
     <div class="col-sm">
         <label>{{$fields[8]->alias}}</label>
-        <input name="{{$fields[8]->name}}" type="text" class="form-control" />
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi-envelope"></i></span>
+            <input name="{{$fields[8]->name}}" type="email" class="form-control" required />
+        </div>
     </div>
 </div>
-
-@section('scripts')
-<script language="text/javascript">
-$('.datepicker').datepicker({
-    format: 'mm/dd/yyyy',
-    startDate: '-3d'
-});
-</script>
-@endsection

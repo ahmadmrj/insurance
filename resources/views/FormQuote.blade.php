@@ -7,10 +7,10 @@
 <div class="row">
   <div class="col-sm">
     <div class="form-wrapper">
-      <form method="POST" action="">
+      <form method="POST" action="" id="form-validation">
           <!-- CROSS Site Request Forgery Protection -->
           @csrf
-          <p class="title">TRUCKING QUICK QUOTE</p>
+          <p class="title main">TRUCKING QUICK QUOTE</p>
           @include('components.trucking')
           <p class="title">INSURED SECTION</p>
           @include('components.insured')
@@ -22,8 +22,8 @@
           @include('components.mvrs')
           <p class="title">BUSINESS SECTION</p>
           @include('components.business')
-          <p class="title">UPLOAD ATTACHMENTS</p>
-          @include('components.attachments')
+          <p class="title">Comment</p>
+          @include('components.comment')
 
           <br/>
           <div class="form-check">

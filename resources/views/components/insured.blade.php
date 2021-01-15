@@ -1,7 +1,7 @@
 <div class="form-group row">
     <div class="col-sm">
         <label>{{$fields[9]->alias}}</label>
-        <input name="{{$fields[9]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[9]->name}}" type="text" class="form-control" required />
     </div>
     <div class="col-sm">
         <label>{{$fields[10]->alias}}</label>
@@ -9,7 +9,7 @@
     </div>
     <div class="col-sm">
         <label>{{$fields[11]->alias}}</label>
-        <input name="{{$fields[11]->name}}" type="text" class="form-control" />
+        <input name="{{$fields[11]->name}}" type="text" class="form-control" required />
     </div>
 </div>
 
@@ -31,7 +31,10 @@
     </div>
     <div class="col-sm">
         <label>{{$fields[15]->alias}}</label>
-        <input name="{{$fields[15]->name}}" type="text" class="form-control" />
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi-signpost-2"></i></span>
+            <input name="{{$fields[15]->name}}" type="text" class="form-control" />
+        </div>
     </div>
 </div>
 
