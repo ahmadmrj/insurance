@@ -8,6 +8,33 @@ body {
     background-color: $background-color;
 }
 
+.tools {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        li {
+            margin: 0 6px;
+            display: inline;
+            font-size: $font-size-xlarge;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &.print-btn {
+                color: $color-blue;
+                &:hover {
+                    color: $color-orange;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
 .form-wrapper {
     margin: 30px 0;
     background-color: white;
@@ -131,10 +158,6 @@ body {
             }
         }
     }
-    .print-btn {
-        margin-top: 50px;
-        text-align: center;
-    }
 }
 
 // Media styles
@@ -143,10 +166,17 @@ body {
         font-size: $font-size-print-default;
         background-color: white;
     }
+    .tools {
+        display: none;
+    }
     .print_area {
         margin: 0;
         padding: 0;
         @include box-shadow(0 0 0 transparent);   
+        header {
+            font-size: $font-size-default !important;
+            margin-bottom: 5px !important;
+        }
         .print-btn {
             display: none;
         }

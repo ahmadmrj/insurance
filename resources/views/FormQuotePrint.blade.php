@@ -33,17 +33,22 @@ for ($i = 0; $i < $rowCount; $i++) {
 ?>
 
 <div class="print_area">
+    <section class="tools">
+        <ul>
+            <li class="print-btn"><i class="bi-printer"></i></li>
+        </ul>
+    </section>
 
     <header class="row">
-        <div class="col-4">Agency Name</div>
+        <div class="col-4">EXCEL GENERAL INSURANCE AGENCY</div>
         <div class="col-8">Trucking Quote Application</div>
     </header>
 
     <section class="row">
         <article class="col-4">
             <div class="address">
-                <p>EXCEL GENERAL INSURANCE AGENCY</p>
                 <p>22222 - SHERMAN WAY # 100   CANOGA PARK ,   CA    91303</p>
+                <p><i>Agency Name</i></p>
             </div>
         </article>
         <article class="col-8">
@@ -202,7 +207,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td rowspan="2">Longest</td>
                     </tr>
                     <tr>
-                    <td>< 50 </td>
+                        <td>< 50 </td>
                         <td>51 - 100</td>
                         <td>101 - 200</td>
                         <td>201 - 300</td>
@@ -229,8 +234,8 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td colspan="5">STATES Traveled to</td>
                     </tr>
                     <tr>
-                        <td colspan="5"></td>
-                        <td colspan="5"></td>
+                        <td colspan="5">--</td>
+                        <td colspan="5">--</td>
                     </tr>
                 </tbody>
             </table>
@@ -277,16 +282,16 @@ for ($i = 0; $i < $rowCount; $i++) {
 
                     @foreach($drivers as $driver)
                     <tr>
-                        <?php $fullName = ($driver[42]->value ?? null) . " " . ($driver[43]->value ?? null); ?>
+                        <?php $fullName = ($driver[45]->value ?? null) . " " . ($driver[46]->value ?? null); ?>
                         <td>{{$fullName}}</td>
-                        <td>{{$driver[44]->value ?? null}}</td>
-                        <td>{{$driver[45]->value ?? null}}</td>
-                        <td>{{$driver[46]->value ?? null}}</td>
                         <td>{{$driver[47]->value ?? null}}</td>
                         <td>{{$driver[48]->value ?? null}}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{$driver[49]->value ?? null}}</td>
+                        <td>{{$driver[50]->value ?? null}}</td>
+                        <td>{{$driver[51]->value ?? null}}</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -314,13 +319,13 @@ for ($i = 0; $i < $rowCount; $i++) {
                 <tbody>
                     @foreach($vehicles as $vehicle)
                     <tr>
-                        <td>{{$vehicle[35]->value ?? null}}</td>
-                        <td>{{$vehicle[36]->value ?? null}}</td>
-                        <td>{{$vehicle[37]->value ?? null}}</td>
                         <td>{{$vehicle[38]->value ?? null}}</td>
                         <td>{{$vehicle[39]->value ?? null}}</td>
                         <td>{{$vehicle[40]->value ?? null}}</td>
                         <td>{{$vehicle[41]->value ?? null}}</td>
+                        <td>{{$vehicle[43]->value ?? null}}</td>
+                        <td>{{$vehicle[42]->value ?? null}}</td>
+                        <td>--</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -346,21 +351,21 @@ for ($i = 0; $i < $rowCount; $i++) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                     <tr class="thead">
                         <td colspan="9">ADDITIONAL LOSS INFORMATION</td>
                     </tr>
                     <tr>
-                        <td colspan="9"></td>
+                        <td colspan="9">--</td>
                     </tr>
                 </tbody>
             </table>
@@ -383,10 +388,10 @@ for ($i = 0; $i < $rowCount; $i++) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                     <tr class="thead">
                         <td>Motor Truck Cargo / On The Hook</td>
@@ -395,10 +400,10 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>Reefer Breakdown- Yes/No</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                     <tr class="thead">
                         <td>Physical Damage- Truck (s)</td>
@@ -407,10 +412,10 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>Trailer Interchange</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                     <tr class="thead">
                         <td>Garage liability</td>
@@ -419,27 +424,14 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>Garage Keeper</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
                     </tr>
                 </tbody>
             </table>
         </article>
     </section>
-
-    <p class="print-btn">
-        <button class="btn btn-success">PRINT</button>
-    </p>
 </div>
-@endsection
-
-
-@section('scripts')
-<script type="text/javascript">
-$('.print-btn .btn').click(function(){
-    window.print();
-});
-</script>
 @endsection

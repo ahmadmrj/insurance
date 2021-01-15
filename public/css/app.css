@@ -13465,6 +13465,36 @@ body {
   background-color: whitesmoke;
 }
 
+.tools ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.tools ul li {
+  margin: 0 6px;
+  display: inline;
+  font-size: 16pt;
+}
+
+.tools ul li:first-child {
+  margin-left: 0;
+}
+
+.tools ul li:last-child {
+  margin-right: 0;
+}
+
+.tools ul li.print-btn {
+  color: #010a65;
+}
+
+.tools ul li.print-btn:hover {
+  color: #DDA440;
+  cursor: pointer;
+}
+
 .form-wrapper {
   margin: 30px 0;
   background-color: white;
@@ -13601,21 +13631,25 @@ body {
   border-bottom: 0;
 }
 
-.print_area .print-btn {
-  margin-top: 50px;
-  text-align: center;
-}
-
 @media print {
   body {
     font-size: 7pt;
     background-color: white;
   }
 
+  .tools {
+    display: none;
+  }
+
   .print_area {
     margin: 0;
     padding: 0;
     box-shadow: 0 0 0 transparent;
+  }
+
+  .print_area header {
+    font-size: 10pt !important;
+    margin-bottom: 5px !important;
   }
 
   .print_area .print-btn {

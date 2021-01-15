@@ -45157,6 +45157,9 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 /***/ (function(module, exports) {
 
 $('document').ready(function () {
+  $('.print-btn').click(function () {
+    window.print();
+  });
   $('.add_item').on('click', function () {
     var container = $(this).parent().find('.items');
     var item = container.find('.item').first().clone();
