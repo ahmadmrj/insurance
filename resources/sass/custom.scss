@@ -32,11 +32,9 @@ body {
             margin-top: 15px;
             color: $color-gray;
             text-transform: uppercase;
-            &.error {
-                color: $color-red;
-                margin-top: 4px;
-                text-transform: initial;
-            }
+        }
+        .help-block {
+            color: $color-red;
         }
     }
 }

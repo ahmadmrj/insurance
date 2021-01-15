@@ -13494,10 +13494,8 @@ body {
   text-transform: uppercase;
 }
 
-.form-wrapper .form-group label.error {
+.form-wrapper .form-group .help-block {
   color: #8d030f;
-  margin-top: 4px;
-  text-transform: initial;
 }
 
 .subsection .title {

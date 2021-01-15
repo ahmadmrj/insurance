@@ -45199,9 +45199,22 @@ $('document').ready(function () {
     clearIfNotMatch: true
   }); // Form validation
 
-  jQuery.validator.setDefaults({
-    debug: true,
-    success: "valid"
+  $.validator.setDefaults({
+    highlight: function highlight(element) {
+      $(element).closest('.form-group').addClass('has-error');
+    },
+    unhighlight: function unhighlight(element) {
+      $(element).closest('.form-group').removeClass('has-error');
+    },
+    errorElement: 'span',
+    errorClass: 'help-block',
+    errorPlacement: function errorPlacement(error, element) {
+      if (element.parent('.input-group').length) {
+        error.insertAfter(element.parent());
+      } else {
+        error.insertAfter(element);
+      }
+    }
   });
   $("#form-validation").validate();
 });

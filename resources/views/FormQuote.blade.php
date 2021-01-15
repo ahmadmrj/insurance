@@ -22,7 +22,7 @@
           @include('components.mvrs')
           <p class="title">BUSINESS SECTION</p>
           @include('components.business')
-          <p class="title">Comment</p>
+          <p class="title">COMMENT</p>
           @include('components.comment')
 
           <br/>

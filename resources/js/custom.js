@@ -43,10 +43,24 @@ $('document').ready(function() {
     $('.phone_us').mask('(000) 000-0000', {clearIfNotMatch: true});
 
     // Form validation
-    jQuery.validator.setDefaults({
-        debug: true,
-        success: "valid"
+    $.validator.setDefaults({
+        highlight: function(element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
     });
-
+    
     $("#form-validation").validate();
+
 });
