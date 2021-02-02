@@ -55,9 +55,9 @@ for ($i = 0; $i < $rowCount; $i++) {
                     <tr>
                         <td class="col">Source code</td>
                         <td class="col">Submitted by</td>
-                        <td class="col">Submitter email</td>
-                        <td class="col">Policy effective date</td>
-                        <td class="col">Today date</td>
+                        <td class="col">Submitter Email</td>
+                        <td class="col">Policy Effective Date</td>
+                        <td class="col">Today Date</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -238,7 +238,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>{{$elements[59]->value ?? null}}</td>
                     </tr>
                     <tr class="thead">
-                        <td>Garage liability</td>
+                        <td>Garage Liability</td>
                         <td>Garage Keeper</td>
                         <td></td>
                     </tr>
@@ -264,7 +264,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                     <tr class="thead">
                         <td>Name</td>
                         <td>DOB</td>
-                        <td>License no.</td>
+                        <td>License No.</td>
                         <td>State</td>
                         <td>Class</td>
                         <td>Yrs Exp</td>
