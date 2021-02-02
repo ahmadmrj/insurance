@@ -53,11 +53,11 @@ for ($i = 0; $i < $rowCount; $i++) {
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td class="col">SOURCE CODE</td>
-                        <td class="col">SUBMITTER INFORMATION</td>
-                        <td class="col">EMAIL</td>
-                        <td class="col">POLICY EFFECTIVE DATE</td>
-                        <td class="col">TODAY DATE</td>
+                        <td class="col">Source code</td>
+                        <td class="col">Submitted by</td>
+                        <td class="col">Submitter email</td>
+                        <td class="col">Policy effective date</td>
+                        <td class="col">Today date</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -161,28 +161,13 @@ for ($i = 0; $i < $rowCount; $i++) {
             <table class="table table-bordered">
                 <tbody>
                     <tr class="thead">
-                        <td width="15%">RADIUS</td>
-                        <td>STATES Traveled to</td>
+                        <td width="15%">Radius</td>
+                        <td>States Traveled to</td>
+                        <td>Commodities Hauled and Percentages</td>
                     </tr>
                     <tr>
                         <td>{{$elements[29]->value ?? null}}</td>
                         <td>{{$elements[44]->value ?? null}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-    </section>
-
-    <section class="row">
-        <article class="col">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <td>Commodities Hauled and Percentages</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
                         <td>{{$elements[28]->value ?? null}}</td>
                     </tr>
                 </tbody>
@@ -228,7 +213,7 @@ for ($i = 0; $i < $rowCount; $i++) {
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td colspan="4">Requested Limits</td>
+                        <td colspan="4">REQUESTED LIMITS</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -272,14 +257,14 @@ for ($i = 0; $i < $rowCount; $i++) {
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td colspan="10">Schedule of Drivers</td>
+                        <td colspan="10">SCHEDULE OF DRIVERS</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="thead">
                         <td>Name</td>
                         <td>DOB</td>
-                        <td>LICENSE NO.</td>
+                        <td>License no.</td>
                         <td>State</td>
                         <td>Class</td>
                         <td>Yrs Exp</td>
@@ -323,7 +308,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>VIN</td>
                         <td>Value</td>
                         <td>G.V.W</td>
-                        <td>Lienholder/Notes</td>
+                        <td>Lineholder/Notes</td>
                     </tr>
                 </thead>
                 <tbody>
