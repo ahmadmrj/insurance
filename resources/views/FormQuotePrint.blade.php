@@ -53,7 +53,7 @@ for ($i = 0; $i < $rowCount; $i++) {
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td class="col">Source code</td>
+                        <td class="col">Source Code</td>
                         <td class="col">Submitted by</td>
                         <td class="col">Submitter Email</td>
                         <td class="col">Policy Effective Date</td>
