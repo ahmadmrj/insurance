@@ -17,7 +17,7 @@ $('document').ready(function() {
         countItems(container);
     });
 
-    $('.items').on('click', '.btn-remove', function () {
+    $('.items').on('click', '.button-remove', function () {
         var container = $(this).closest('.items')
         var item      = $(this).closest('.row');
         
@@ -64,7 +64,6 @@ $('document').ready(function() {
             }
         }
     });
-    
-    $("#form-validation").validate();
 
+    $("#form-validation").validate();
 });

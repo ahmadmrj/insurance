@@ -45173,7 +45173,7 @@ $('document').ready(function () {
     item.appendTo(container);
     countItems(container);
   });
-  $('.items').on('click', '.btn-remove', function () {
+  $('.items').on('click', '.button-remove', function () {
     var container = $(this).closest('.items');
     var item = $(this).closest('.row');
 

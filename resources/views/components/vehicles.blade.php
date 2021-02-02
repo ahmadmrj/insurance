@@ -3,46 +3,42 @@
     <div class="items" data-max-items="9">
         <div class="form-group row item">
             <div class="col-sm">
-                <label>{{$fields[38]->alias}}</label>
-                <input name="{{$fields[38]->name}}" type="number" class="form-control" />
+                <label>{{$fields[30]->alias}}</label>
+                <input name="{{$fields[30]->name}}" type="number" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[39]->alias}}</label>
-                <input name="{{$fields[39]->name}}" type="number" class="form-control" />
+                <label>{{$fields[31]->alias}}</label>
+                <input name="{{$fields[31]->name}}" type="number" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[40]->alias}}</label>
-                <input name="{{$fields[40]->name}}" type="text" class="form-control" />
+                <label>{{$fields[32]->alias}}</label>
+                <input name="{{$fields[32]->name}}" type="text" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[41]->alias}}</label>
-                <input name="{{$fields[41]->name}}" type="text" class="form-control" />
+                <label>{{$fields[33]->alias}}</label>
+                <input name="{{$fields[33]->name}}" type="text" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[42]->alias}}</label>
-                <select name="{{$fields[42]->name}}" class="form-select">
-                    @foreach (json_decode($fields[42]->values, true) as $key => $val)
+                <label>{{$fields[34]->alias}}</label>
+                <select name="{{$fields[34]->name}}" class="form-select">
+                    @foreach (json_decode($fields[34]->values, true) as $key => $val)
                     <option value="{{$val}}">{{$val}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="col-sm">
-                <label>{{$fields[43]->alias}}</label>
+                <label>{{$fields[35]->alias}}</label>
                 <div class="input-group">
-                    <input name="{{$fields[43]->name}}" type="number" class="form-control" />
+                    <input name="{{$fields[35]->name}}" type="number" class="form-control" />
                     <span class="input-group-text">$</span>
                 </div>
             </div>
             <div class="col-sm">
-                <label>{{$fields[44]->alias}}</label>
-                <select name="{{$fields[44]->name}}" class="form-select">
-                    @foreach (json_decode($fields[44]->values, true) as $key => $val)
-                    <option value="{{$val}}">{{$val}}</option>
-                    @endforeach
-                </select>
+                <label>{{$fields[36]->alias}}</label>
+                <input name="{{$fields[36]->name}}" type="text" class="form-control" />
             </div>
-            <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                <span class="btn-remove"><i class="bi-x-circle"></i></span>
+            <div class="col-sm-1 d-flex align-items-center justify-content-center button-group">
+                <span class="button button-remove" title="Remove" ><i class="bi-x-circle"></i></span>
             </div>
         </div>
     </div>
@@ -56,34 +52,30 @@
     <div class="items" data-max-items="9">
         <div class="form-group row item">
             <div class="col-sm">
-                <label>{{$fields[38]->alias}}</label>
-                <input name="{{$fields[38]->name}}" type="number" class="form-control" />
+                <label>{{$fields[30]->alias}}</label>
+                <input name="{{$fields[30]->name}}" type="number" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[39]->alias}}</label>
-                <input name="{{$fields[39]->name}}" type="number" class="form-control" />
+                <label>{{$fields[31]->alias}}</label>
+                <input name="{{$fields[31]->name}}" type="number" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[41]->alias}}</label>
-                <input name="{{$fields[41]->name}}" type="text" class="form-control" />
+                <label>{{$fields[33]->alias}}</label>
+                <input name="{{$fields[33]->name}}" type="text" class="form-control" />
             </div>
             <div class="col-sm">
-                <label>{{$fields[43]->alias}}</label>
+                <label>{{$fields[35]->alias}}</label>
                 <div class="input-group">
-                    <input name="{{$fields[43]->name}}" type="number" class="form-control" />
+                    <input name="{{$fields[35]->name}}" type="number" class="form-control" />
                     <span class="input-group-text">$</span>
                 </div>
             </div>
             <div class="col-sm">
-                <label>{{$fields[44]->alias}}</label>
-                <select name="{{$fields[44]->name}}" class="form-select">
-                    @foreach (json_decode($fields[44]->values, true) as $key => $val)
-                    <option value="{{$val}}">{{$val}}</option>
-                    @endforeach
-                </select>
+                <label>{{$fields[36]->alias}}</label>
+                <input name="{{$fields[36]->name}}" type="text" class="form-control" />
             </div>
-            <div class="col-sm-1 d-flex align-items-center justify-content-center">
-                <span class="btn-remove"><i class="bi-x-circle"></i></span>
+            <div class="col-sm-1 d-flex align-items-center justify-content-center button-group">
+                <span class="button button-remove" title="Remove"><i class="bi-x-circle"></i></span>
             </div>
         </div>
     </div>

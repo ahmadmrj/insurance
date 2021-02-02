@@ -8,6 +8,21 @@ body {
     background-color: $background-color;
 }
 
+h1 {
+    font-size: $font-size-xlarge;
+    color: $form-title-color;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.row-caption {
+    font-size: $font-size-large;
+    margin-top: 37px;
+    color: $label-color;
+}
+
 .tools {
     ul {
         list-style: none;
@@ -53,6 +68,10 @@ body {
             font-size: $font-size-xlarge;
             font-weight: bold;
         }
+        &.subtitle {
+            color: $color-gray;
+            border-bottom-color: lighten($color-gray, 20%);
+        }
     }
     .form-group {
         label {
@@ -85,6 +104,15 @@ body {
         font-weight: bold;
         font-size: $font-size-normal;
         margin-bottom: 10px;
+        .form-title {
+            color: $form-title-color;
+            font-size: $font-size-xlarge;
+            text-align: center;
+        }
+    }
+    .logo {
+        height: 58px;
+        margin-bottom: 5px;
     }
     .address {
         padding: 10px 0 0;
@@ -175,7 +203,11 @@ body {
         @include box-shadow(0 0 0 transparent);   
         header {
             font-size: $font-size-default !important;
-            margin-bottom: 5px !important;
+            margin-bottom: 15px !important;
+        }
+        .logo {
+            height: 38px;
+            margin-bottom: 5px;
         }
         .print-btn {
             display: none;
@@ -183,7 +215,7 @@ body {
         .table {
             td {
                 padding: 0px 10px;
-                height: 18px !important;
+                height: 20px !important;
             }
         }
         .address {

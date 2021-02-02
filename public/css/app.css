@@ -13421,13 +13421,26 @@ fieldset:disabled .btn {
   margin-left: 5px;
 }
 
-.btn-remove {
+.button-group .button {
   font-size: 12pt;
-  color: #8d030f;
   cursor: pointer;
+  color: #818181;
+  margin-right: 15px;
 }
 
-.d-flex .btn-remove {
+.button-group .button:last-child {
+  margin-right: 0;
+}
+
+.button-group .button.button-remove:hover {
+  color: #8d030f !important;
+}
+
+.button-group .button:hover {
+  color: #4e4e4e;
+}
+
+.d-flex .button {
   margin-top: 30px;
 }
 
@@ -13449,13 +13462,26 @@ fieldset:disabled .btn {
   margin-left: 5px;
 }
 
-.btn-remove {
+.button-group .button {
   font-size: 12pt;
-  color: #8d030f;
   cursor: pointer;
+  color: #818181;
+  margin-right: 15px;
 }
 
-.d-flex .btn-remove {
+.button-group .button:last-child {
+  margin-right: 0;
+}
+
+.button-group .button.button-remove:hover {
+  color: #8d030f !important;
+}
+
+.button-group .button:hover {
+  color: #4e4e4e;
+}
+
+.d-flex .button {
   margin-top: 30px;
 }
 
@@ -13463,6 +13489,22 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 10pt;
   background-color: whitesmoke;
+}
+
+h1,
+.h1 {
+  font-size: 16pt;
+  color: #010a65;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.row-caption {
+  font-size: 14pt;
+  margin-top: 37px;
+  color: #818181;
 }
 
 .tools ul {
@@ -13518,6 +13560,11 @@ body {
   font-weight: bold;
 }
 
+.form-wrapper .title.subtitle {
+  color: #818181;
+  border-bottom-color: #b4b4b4;
+}
+
 .form-wrapper .form-group label {
   margin-top: 15px;
   color: #818181;
@@ -13546,6 +13593,17 @@ body {
   font-weight: bold;
   font-size: 12pt;
   margin-bottom: 10px;
+}
+
+.print_area header .form-title {
+  color: #010a65;
+  font-size: 16pt;
+  text-align: center;
+}
+
+.print_area .logo {
+  height: 58px;
+  margin-bottom: 5px;
 }
 
 .print_area .address {
@@ -13649,7 +13707,12 @@ body {
 
   .print_area header {
     font-size: 10pt !important;
-    margin-bottom: 5px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .print_area .logo {
+    height: 38px;
+    margin-bottom: 5px;
   }
 
   .print_area .print-btn {
@@ -13658,7 +13721,7 @@ body {
 
   .print_area .table td {
     padding: 0px 10px;
-    height: 18px !important;
+    height: 20px !important;
   }
 
   .print_area .address {

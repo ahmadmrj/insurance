@@ -18,14 +18,28 @@
     margin-left: 5px;
 }
 
-.btn-remove {
-    font-size: 12pt;
-    color: $color-red;
-    cursor: pointer;
+.button-group {
+    .button {
+        font-size: 12pt;
+        cursor: pointer;
+        color: $color-gray;
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.button-remove {
+            &:hover {
+                color: $color-red !important;
+            }
+        }
+        &:hover {
+            color: darken($color-gray, 20%);
+        }
+    }
 }
 
 .d-flex {
-    .btn-remove {
+    .button {
         margin-top: 30px;
     }
 }

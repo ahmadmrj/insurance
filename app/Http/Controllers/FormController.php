@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\States;
 use App\Services\FormDataService;
 use Illuminate\Http\Request;
 use App\Services\FormService;
@@ -10,9 +11,15 @@ class FormController extends Controller
 {
     public function truckingQuickQuote(FormService $formService)
     {
-        $formFields = $formService->getFormByName('trucking_quick_quote');
+        $formFields     = $formService->getFormByName('trucking_quick_quote');
+        $states         = States::all();
+        $statesDropdown = ['N/A' => '-- Choose One --'];
+        
+        foreach ($states as $state) {
+            $statesDropdown[$state['code']] = $state['name'] . ' (' . $state['code'] . ')';
+        }
 
-        return view("FormQuote", ['fields' => $formFields]);
+        return view("FormQuote", ['fields' => $formFields, 'states' => $statesDropdown]);
     }
 
     public function submitQuote(Request $request, FormService $formService)

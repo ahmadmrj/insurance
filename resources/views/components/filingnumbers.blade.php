@@ -1,5 +1,4 @@
 <?php
-$yearsInBusiness   = json_decode($fields[27]->values, true);
 $radiusOfOperation = json_decode($fields[28]->values, true);
 ?>
 <div class="form-group row">
