@@ -15,14 +15,14 @@
           @include('components.trucking')
           <p class="title">INSURED SECTION</p>
           @include('components.insured')
-          <p class="title">VEHICLES SECTION</p>
-          @include('components.vehicles')
-          <p class="title">Fill up the field and attach MVRs for all driver(s) and owner(s) no more than 30 days old</p>
-          @include('components.mvrs')
           <p class="title">BUSINESS SECTION</p>
           @include('components.business')
           <p class="title">REQUESTED LIMITS</p>
           @include('components.limits')
+          <p class="title">Fill up the field and attach MVRs for all driver(s) and owner(s) no more than 30 days old</p>
+          @include('components.mvrs')
+          <p class="title">VEHICLES SECTION</p>
+          @include('components.vehicles')
 
           <br/>
           <!-- <div class="form-check">
