@@ -327,5 +327,16 @@ for ($i = 0; $i < $rowCount; $i++) {
             </table>
         </article>
     </section>
+
+    <section class="footer">
+        <div class="row">
+            <div class="col-6">
+                <p>Name</p>
+            </div>
+            <div class="col-6">
+                <p>Signature</p>
+            </div>
+        </div>
+    </section>
 </div>
 @endsection

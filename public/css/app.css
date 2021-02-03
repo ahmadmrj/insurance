@@ -13592,10 +13592,14 @@ h1,
   border-bottom: 1px dotted #818181 !important;
 }
 
+.footer {
+  display: none;
+}
+
 .print_area {
   margin: 30px 0;
   background-color: white;
-  padding: 20px 30px;
+  padding: 20px 30px 180px;
   box-shadow: 3px 2px 4px rgba(170, 170, 170, 0.6);
 }
 
@@ -13707,6 +13711,21 @@ h1,
 
   .tools {
     display: none;
+  }
+
+  .footer {
+    display: block;
+    width: 100%;
+    margin: 0 70px;
+    position: absolute;
+    bottom: 70px;
+    font-weight: bold;
+    font-size: 12pt;
+  }
+
+  .footer p {
+    width: 100%;
+    text-align: left;
   }
 
   .print_area {

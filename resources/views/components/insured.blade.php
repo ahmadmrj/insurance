@@ -137,9 +137,14 @@
 </div>
 
 <div class="form-group row">
-    <div class="col-10">
+    <div class="col-6">
         <label>{{$fields[28]->alias}}</label>
         <input name="{{$fields[28]->name}}" type="text" class="form-control" required />
+    </div>
+
+    <div class="col-4">
+        <label>{{$fields[44]->alias}}</label>
+        <input name="{{$fields[44]->name}}" type="text" class="form-control" required />
     </div>
 
     <?php $radius = json_decode($fields[29]->values); ?>
@@ -151,12 +156,5 @@
             <option value="{{$val}}">{{$val}}</option>
             @endforeach
         </select>
-    </div>
-</div>
-
-<div class="form-group row">
-    <div class="col-sm">
-        <label>{{$fields[44]->alias}}</label>
-        <input name="{{$fields[44]->name}}" type="text" class="form-control" required />
     </div>
 </div>

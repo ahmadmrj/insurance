@@ -92,8 +92,6 @@ h1 {
     }
 }
 
-
-
 .subsection {
     .title {
         margin-top: 30px !important;
@@ -103,10 +101,14 @@ h1 {
     }
 }
 
+.footer {
+    display: none;
+}
+
 .print_area {
     margin: 30px 0;
     background-color: white;
-    padding: 20px 30px;
+    padding: 20px 30px 180px;
     $shadow-color: #aaa;
     @include box-shadow(3px 2px 4px rgba($shadow-color, .6));
     header {
@@ -205,6 +207,19 @@ h1 {
     }
     .tools {
         display: none;
+    }
+    .footer {
+        display: block;
+        width: 100%;
+        margin: 0 70px;
+        position: absolute;
+        bottom: 70px;
+        font-weight: bold;
+        font-size: $font-size-normal;
+        p {
+            width: 100%;
+            text-align: left;
+        }
     }
     .print_area {
         margin: 0;
