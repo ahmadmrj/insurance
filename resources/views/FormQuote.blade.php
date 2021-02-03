@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.fullwidth')
 
 @section('title', "TRUCKING QUICK QUOTE")
 

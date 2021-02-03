@@ -54,7 +54,7 @@ class FormsSeeder extends Seeder
             ['template' => $template, 'name' => null, 'alias' => 'City', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Street', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Zip', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Commodities hauled', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Commodities Hauled and Percentages', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Radius of operation', 'values' => json_encode(['1-100', '101-300', '301-500', '501-1500', '1500+']), 'multiple' => false, 'group_id' => null],
 
             // Section 3

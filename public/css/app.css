@@ -13575,6 +13575,16 @@ h1,
   color: #8d030f;
 }
 
+.container-fluid .form-wrapper,
+.container-sm .form-wrapper,
+.container-md .form-wrapper,
+.container-lg .form-wrapper,
+.container-xl .form-wrapper,
+.container-xxl .form-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .subsection .title {
   margin-top: 30px !important;
   margin-bottom: 0;
