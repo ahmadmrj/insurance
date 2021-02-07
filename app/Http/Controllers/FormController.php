@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TruckingQuote;
 use App\Models\States;
 use App\Services\FormDataService;
 use Illuminate\Http\Request;
 use App\Services\FormService;
+use Illuminate\Support\Facades\Mail;
 
 class FormController extends Controller
 {
@@ -13,7 +15,7 @@ class FormController extends Controller
     {
         $formFields     = $formService->getFormByName('trucking_quick_quote');
         $states         = States::all();
-        $statesDropdown = ['N/A' => '-- Choose One --'];
+        $statesDropdown = ['N/A' => 'N/A'];
         
         foreach ($states as $state) {
             $statesDropdown[$state['code']] = $state['name'] . ' (' . $state['code'] . ')';
@@ -30,6 +32,8 @@ class FormController extends Controller
 
         $hash = base64_encode(serialize(['user' => $userId]));
         
+        Mail::to(config('mail.from.address'))->send(new TruckingQuote($hash));
+
         return view("FormSubmitted", ['url' => url("/view/{$hash}")]);
     }
 

@@ -1,0 +1,53 @@
+@import "mixins/box-shadow";
+@import "variables";
+@import "helpers";
+
+@import 'https://fonts.googleapis.com/css?family=Archivo:300,400,600,700';
+
+body {
+    background-color: white;
+    font-family: Archivo, 'Times New Roman', Times, serif;
+}
+
+.mail_header {
+    p {
+        font-size: $font-size-xlarge;
+        color: white;
+        background-color: $form-title-color;
+        text-align: left;
+        padding: 30px;
+        margin: 0;
+    }
+}
+
+.mail_content {
+    text-align: center;
+    padding: 30px;
+    font-size: $font-size-large;
+}
+
+.mail_title {
+    font-size: $font-size-xlarge;
+    font-weight: bold;
+    padding: 20px;
+}
+
+a {
+    &.btn {
+        text-decoration: none;
+        color: white;
+        font-size: $font-size-large;
+        padding: 10px 20px;
+        background-color: $color-orange;
+        border: 1px solid darken($color-orange, 15%);
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        &:hover {
+            text-decoration: none;
+            color: white;
+            background-color: darken($color-orange, 15%);
+            border-color: $color-orange;
+        }
+    }
+}

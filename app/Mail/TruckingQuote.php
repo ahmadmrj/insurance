@@ -11,14 +11,16 @@ class TruckingQuote extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $url;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($hash)
     {
-        //
+        $this->url = url("/view/{$hash}");
     }
 
     /**
@@ -29,9 +31,9 @@ class TruckingQuote extends Mailable
     public function build()
     {
         return $this
-            ->from("info@excelgeneralagency.com")
+            ->from(config('mail.from.address'))
             ->subject('New form received')
-            ->view('emails.forms.truckingQuote');
+            ->view('emails.forms.truckingQuote', ['url' => $this->url]);
     }
     
 }
