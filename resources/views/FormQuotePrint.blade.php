@@ -243,13 +243,13 @@ for ($i = 0; $i < $rowCount; $i++) {
                     </tr>
                     <tr class="thead">
                         <td>Garage Liability</td>
+                        <td>General Liability</td>
                         <td>Garage Keeper</td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td>{{$elements[60]->value ?? null}}</td>
+                        <td>{{$elements[69]->value ?? null}}</td>
                         <td>{{$elements[61]->value ?? null}}</td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>

@@ -78,15 +78,15 @@ class FormsSeeder extends Seeder
             ['template' => $template, 'name' => null, 'alias' => 'States traveled to', 'values' => null, 'multiple' => false, 'group_id' => null],
 
             // Section 5
-            ['template' => $template, 'name' => null, 'alias' => 'Prior Insurance Carrier', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Effective', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Expiration', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Policy Number', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Premium', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => '#Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Liability Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'PD Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => '#Units', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Prior Insurance Carrier', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => 'Effective', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => 'Expiration', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => 'Policy Number', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => 'Premium', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => '#Losses', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => 'Liability Losses', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => 'PD Losses', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
+            ['template' => $template, 'name' => null, 'alias' => '#Units', 'values' => null, 'multiple' => true, 'group_id' => 'business'],
             
             // Section6
             ['template' => $template, 'name' => null, 'alias' => 'Auto Liability - CSL', 'values' => json_encode(['$750,000', '$1000,000', '$1,500,000', '$2,000,000']), 'multiple' => false, 'group_id' => null],

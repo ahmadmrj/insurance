@@ -1,6 +1,6 @@
 <div class="subsection">
     <div class="items">
-        <div class="form-group row">
+        <div class="form-group row item">
             <div class="col-2">
                 <label>{{$fields[45]->alias}}</label>
                 <input name="{{$fields[45]->name}}" type="text" class="form-control" maxlength="25" />
