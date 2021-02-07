@@ -39,9 +39,13 @@
 </div>
 
 <div class="form-group row">
-    <div class="col-4">
+    <div class="col-2">
         <label>{{$fields[11]->alias}}</label>
         <input name="{{$fields[11]->name}}" type="text" class="form-control" required />
+    </div> 
+    <div class="col-2">
+        <label>{{$fields[70]->alias}}</label>
+        <input name="{{$fields[70]->name}}" type="text" class="form-control" />
     </div> 
     <div class="col-2">
         <label>{{$fields[14]->alias}}</label>
@@ -105,7 +109,7 @@
         <label>{{$fields[22]->alias}}</label>
         <div class="input-group">
             <span class="input-group-text"><i class="bi-signpost-2"></i></span>
-            <input name="{{$fields[22]->name}}" type="text" class="form-control" placeholder="mailing address" />
+            <input name="{{$fields[22]->name}}" type="text" class="form-control" placeholder="Mailing address" />
         </div>
     </div>
     <div class="col-2">
@@ -130,7 +134,7 @@
         <label>{{$fields[26]->alias}}</label>
         <div class="input-group">
             <span class="input-group-text"><i class="bi-signpost-2"></i></span>
-            <input name="{{$fields[26]->name}}" type="text" class="form-control" placeholder="physical/garaging address" />
+            <input name="{{$fields[26]->name}}" type="text" class="form-control" placeholder="Physical/garaging address" />
         </div>
     </div>
     <div class="col-2">

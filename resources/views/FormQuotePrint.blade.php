@@ -86,7 +86,7 @@ for ($i = 0; $i < $rowCount; $i++) {
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td>Insured Name</td>
+                        <td>Owner's Name</td>
                         <td>Business Name</td>
                         <td>Telephone</td>
                         <td>Email</td>
@@ -106,17 +106,21 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td colspan="2">Operation Classification</td>
                         <td colspan="2">State</td>
                         <td>Carrier Operation</td>
+                        <td>MC#</td>
                     </tr>
                     <tr>
                         <td colspan="2">{{$elements[15]->value ?? null}}</td>
                         <td colspan="2">{{$elements[16]->value ?? null}}</td>
                         <td>{{$elements[17]->value ?? null}}</td>
+                        <td>{{$elements[67]->value ?? null}}</td>
                     </tr>
                     <tr class="thead">
+                        <td colspan="3">State Filing#</td>
                         <td colspan="3">DOT#</td>
                         <td colspan="3">FEIN/TAX ID</td>
                     </tr>
                     <tr>
+                        <td colspan="3">{{$elements[66]->value ?? null}}</td>    
                         <td colspan="3">{{$elements[18]->value ?? null}}</td>    
                         <td colspan="2">{{$elements[19]->value ?? null}}</td>
                     </tr>

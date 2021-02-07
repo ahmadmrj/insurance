@@ -62,7 +62,7 @@ class FormsSeeder extends Seeder
             ['template' => $template, 'name' => null, 'alias' => 'make model', 'values' => null, 'multiple' => true, 'group_id' => 'vehicle'],
             ['template' => $template, 'name' => null, 'alias' => 'body type', 'values' => null, 'multiple' => true, 'group_id' => 'vehicle'],
             ['template' => $template, 'name' => null, 'alias' => 'vin', 'values' => null, 'multiple' => true, 'group_id' => 'vehicle'],
-            ['template' => $template, 'name' => null, 'alias' => 'gvw', 'values' => json_encode(['0-26000 lbs', '26001-45000 lbs', '45001-65000 lbs', '65001-80000 lbs']), 'multiple' => true, 'group_id' => 'vehicle'],
+            ['template' => $template, 'name' => null, 'alias' => 'gvw', 'values' => json_encode(['0-10000 lbs', '10001-26000 lbs', '26001-45000 lbs', '45001-65000 lbs', '65001-80000 lbs']), 'multiple' => true, 'group_id' => 'vehicle'],
             ['template' => $template, 'name' => null, 'alias' => 'value ($)', 'values' => null, 'multiple' => true, 'group_id' => 'vehicle'],
             ['template' => $template, 'name' => null, 'alias' => 'Lienholder/Notes', 'values' => null, 'multiple' => true,'group_id' => 'vehicle'],
 
@@ -83,29 +83,37 @@ class FormsSeeder extends Seeder
             ['template' => $template, 'name' => null, 'alias' => 'Expiration', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Policy Number', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Premium', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => '#Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Liability Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'PID Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Units', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'PD Losses', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => '#Units', 'values' => null, 'multiple' => false, 'group_id' => null],
             
             // Section6
-            ['template' => $template, 'name' => null, 'alias' => 'Auto Liability - CSL', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Auto Liability - CSL', 'values' => json_encode(['$750,000', '$1000,000', '$1,500,000', '$2,000,000']), 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Reefer Breakdown', 'values' => json_encode(['Yes' => 'Yes', 'No' => 'No']), 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Uninsured Motorist- Bodily Injury', 'values' => json_encode(['30.000', '100.000', '300.000', '750.000', '1,000.000']), 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Motor Truck Cargo / On The Hook', 'values' => json_encode(['Yes' => 'Yes', 'No' => 'No']), 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Medical Payments', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Trailer Interchange', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Garage liability', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Garage Keeper', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Uninsured Motorist- Bodily Injury', 'values' => json_encode(['30,000/60,000', '100,000', '300,000', '750,000', '1,000,000']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Motor Truck Cargo / On The Hook', 'values' => json_encode(['N/A', '25,000', '50,000', '100,000', '150,000', '200,000', '250,000', '300,000', '500,000', '750,000', '1,000,000']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Medical Payments', 'values' => json_encode(['N/A', '5,000', '10,000', '15,000']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Trailer Interchange', 'values' => json_encode(['N/A', '25,000', '50,000', '75,000', '100,000']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Garage liability', 'values' => json_encode(['N/A', '500,000/1,000,000', '1,000,000/2,000,000', '2,000,000/4,000,000']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Garage Keeper', 'values' => json_encode(['N/A', '50,000', '100,000', '200,000', '300,000']), 'multiple' => false, 'group_id' => null],
             
             // Section 4-1
             ['template' => $template, 'name' => null, 'alias' => 'Hire date', 'values' => null, 'multiple' => true,'group_id' => 'driver'],
             ['template' => $template, 'name' => null, 'alias' => 'Accident(s)', 'values' => null, 'multiple' => true,'group_id' => 'driver'],
             ['template' => $template, 'name' => null, 'alias' => 'Violation(s)', 'values' => null, 'multiple' => true,'group_id' => 'driver'],
-            ['template' => $template, 'name' => null, 'alias' => 'Position', 'values' => json_encode(['Owner', 'Driver']), 'multiple' => true,'group_id' => 'driver'],
+            ['template' => $template, 'name' => null, 'alias' => 'Position', 'values' => json_encode(['Owner', 'Driver', 'Officer']), 'multiple' => true,'group_id' => 'driver'],
 
             ['template' => $template, 'name' => null, 'alias' => 'State filing#', 'values' => null, 'multiple' => false,'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'MC#', 'values' => null, 'multiple' => false,'group_id' => null],
+            
+            ['template' => $template, 'name' => null, 'alias' => 'Cargo deductable', 'values' => json_encode(['1,000', '2,500', '5,000']), 'multiple' => false,'group_id' => null],
+
+            ['template' => $template, 'name' => null, 'alias' => 'General liability', 'values' => json_encode(['N/A', '500,000/1,000,000', '1,000,000/2,000,000', '2,000,000/4,000,000']), 'multiple' => false,'group_id' => null],
+
+            ['template' => $template, 'name' => null, 'alias' => 'Entity type', 'values' => json_encode(['LLC', 'INC', 'DBA', 'LLP', 'GP', 'SB']), 'multiple' => false,'group_id' => null],
+
+
         ]);
             
     }

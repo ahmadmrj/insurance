@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm">
                 <label>{{$fields[31]->alias}}</label>
-                <input name="{{$fields[31]->name}}" type="number" class="form-control" />
+                <input name="{{$fields[31]->name}}" type="text" class="form-control" />
             </div>
             <div class="col-sm">
                 <label>{{$fields[32]->alias}}</label>
@@ -16,7 +16,7 @@
             </div>
             <div class="col-sm">
                 <label>{{$fields[33]->alias}}</label>
-                <input name="{{$fields[33]->name}}" type="text" class="form-control" />
+                <input name="{{$fields[33]->name}}" type="text" class="form-control" maxlength="17" />
             </div>
             <div class="col-sm">
                 <label>{{$fields[34]->alias}}</label>
@@ -29,7 +29,7 @@
             <div class="col-sm">
                 <label>{{$fields[35]->alias}}</label>
                 <div class="input-group">
-                    <input name="{{$fields[35]->name}}" type="number" class="form-control" />
+                    <input name="{{$fields[35]->name}}" type="text" class="form-control money" />
                     <span class="input-group-text">$</span>
                 </div>
             </div>
@@ -60,13 +60,17 @@
                 <input name="{{$fields[31]->name}}" type="number" class="form-control" />
             </div>
             <div class="col-sm">
+                <label>{{$fields[32]->alias}}</label>
+                <input name="{{$fields[32]->name}}" type="text" class="form-control" />
+            </div>
+            <div class="col-sm">
                 <label>{{$fields[33]->alias}}</label>
                 <input name="{{$fields[33]->name}}" type="text" class="form-control" />
             </div>
             <div class="col-sm">
                 <label>{{$fields[35]->alias}}</label>
                 <div class="input-group">
-                    <input name="{{$fields[35]->name}}" type="number" class="form-control" />
+                    <input name="{{$fields[35]->name}}" type="text" class="form-control money" />
                     <span class="input-group-text">$</span>
                 </div>
             </div>

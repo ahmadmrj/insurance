@@ -45,6 +45,8 @@ $('document').ready(function() {
 
     // Input mask
     $('.phone_us').mask('(000) 000-0000', {clearIfNotMatch: true});
+    $('.money').mask("000,000,000,000,000", {reverse: true});
+    $('.date').mask('00/00/0000', {clearIfNotMatch: true});
 
     // Form validation
     $.validator.setDefaults({
