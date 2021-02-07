@@ -55,13 +55,6 @@
         <label>{{$fields[19]->alias}}</label>
         <input name="{{$fields[19]->name}}" type="text" class="form-control" maxlength="10" required />
     </div> 
-    <div class="col-3">
-        <label>{{$fields[18]->alias}}</label>
-        <input name="{{$fields[18]->name}}" type="text" class="form-control" required />
-    </div> 
-</div>
-
-<div class="form-group row">
     <div class="col-sm">
         <?php $operations = json_decode($fields[15]->values); ?>
         <label>{{$fields[15]->alias}}</label>
@@ -70,19 +63,41 @@
             <option value="{{$val}}">{{$val}}</option>
             @endforeach
         </select>
-    </div> 
+    </div>
+     
+</div>
+
+<div class="form-group row">
     <div class="col-sm">
+        <?php $limitedStates = json_decode($fields[16]->values); ?>
         <label>{{$fields[16]->alias}}</label>
         <select name="{{$fields[16]->name}}" class="form-select">
-            @foreach ($states as $key => $val)
-            <option value="{{$key}}">{{$val}}</option>
+            @foreach ($limitedStates as $key => $val)
+            <option value="{{$val}}">{{$val}}</option>
             @endforeach
         </select>
     </div>
     <div class="col-sm">
+        <label>{{$fields[66]->alias}}</label>
+        <input name="{{$fields[66]->name}}" type="text" class="form-control" required />
+    </div>
+    <div class="col-sm">
+        <?php $cop = json_decode($fields[17]->values); ?>
         <label>{{$fields[17]->alias}}</label>
-        <input name="{{$fields[17]->name}}" type="text" class="form-control" required />
+        <select name="{{$fields[17]->name}}" class="form-select" required>
+            @foreach ($cop as $key => $val)
+            <option value="{{$val}}">{{$val}}</option>
+            @endforeach
+        </select>
+    </div>
+    <div class="col-sm">
+        <label>{{$fields[67]->alias}}</label>
+        <input name="{{$fields[67]->name}}" type="text" class="form-control" />
     </div> 
+    <div class="col-3">
+        <label>{{$fields[18]->alias}}</label>
+        <input name="{{$fields[18]->name}}" type="text" class="form-control" required />
+    </div>
 </div>
 
 <div class="form-group row">

@@ -39,9 +39,9 @@ class FormsSeeder extends Seeder
             ['template' => $template, 'name' => null, 'alias' => 'Telephone', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Email', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'Establish year', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Operation classification', 'values' => json_encode(['Private', 'Non-tracking']), 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'State', 'values' => null, 'multiple' => false, 'group_id' => null],
-            ['template' => $template, 'name' => null, 'alias' => 'Carrier operation', 'values' => null, 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Operation classification', 'values' => json_encode(['Private', 'Non-tracking', 'For Hire']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'State', 'values' => json_encode(['AZ', 'CA', 'NV', 'TX', 'OR']), 'multiple' => false, 'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'Carrier operation', 'values' => json_encode(['Interstate', 'Intrastate (HM)', 'Intrastate (Non HM)']), 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'DOT', 'values' => null, 'multiple' => false, 'group_id' => null],
             ['template' => $template, 'name' => null, 'alias' => 'FEIN/TAX ID', 'values' => null, 'multiple' => false, 'group_id' => null],
             
@@ -103,7 +103,9 @@ class FormsSeeder extends Seeder
             ['template' => $template, 'name' => null, 'alias' => 'Accident(s)', 'values' => null, 'multiple' => true,'group_id' => 'driver'],
             ['template' => $template, 'name' => null, 'alias' => 'Violation(s)', 'values' => null, 'multiple' => true,'group_id' => 'driver'],
             ['template' => $template, 'name' => null, 'alias' => 'Position', 'values' => json_encode(['Owner', 'Driver']), 'multiple' => true,'group_id' => 'driver'],
-            
+
+            ['template' => $template, 'name' => null, 'alias' => 'State filing#', 'values' => null, 'multiple' => false,'group_id' => null],
+            ['template' => $template, 'name' => null, 'alias' => 'MC#', 'values' => null, 'multiple' => false,'group_id' => null],
         ]);
             
     }
