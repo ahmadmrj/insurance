@@ -30,6 +30,19 @@ for ($i = 0; $i < $rowCount; $i++) {
         $drivers[$i][$col] = $val[$i] ?? null;                
     }
 }
+
+// Businesses
+$businesses = [];
+foreach ($elements['business'] as $row) {
+    $rowCount = count($row);
+    break;
+}
+
+for ($i = 0; $i < $rowCount; $i++) {
+    foreach ($elements['business'] as $col => $val) {
+        $drivers[$i][$col] = $val[$i] ?? null;                
+    }
+}
 ?>
 
 <div class="print_area">
@@ -89,7 +102,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>Owner's Name</td>
                         <td>Business Name</td>
                         <td>Telephone</td>
-                        <td>Email</td>
+                        <td colspan="2">Email</td>
                         <td>Establish Year</td>
                     </tr>
                 </thead>
@@ -99,7 +112,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>{{$fullName}}</td>
                         <td>{{$elements[11]->value ?? null}}</td>
                         <td>{{$elements[12]->value ?? null}}</td>
-                        <td>{{$elements[13]->value ?? null}}</td>
+                        <td colspan="2">{{$elements[13]->value ?? null}}</td>
                         <td>{{$elements[14]->value ?? null}}</td>
                     </tr>
                     <tr class="thead">
@@ -115,13 +128,13 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>{{$elements[67]->value ?? null}}</td>
                     </tr>
                     <tr class="thead">
-                        <td colspan="3">State Filing#</td>
-                        <td colspan="3">DOT#</td>
-                        <td colspan="3">FEIN/TAX ID</td>
+                        <td colspan="2">State Filing#</td>
+                        <td colspan="2">DOT#</td>
+                        <td colspan="2">FEIN/TAX ID</td>
                     </tr>
                     <tr>
-                        <td colspan="3">{{$elements[66]->value ?? null}}</td>    
-                        <td colspan="3">{{$elements[18]->value ?? null}}</td>    
+                        <td colspan="2">{{$elements[66]->value ?? null}}</td>    
+                        <td colspan="2">{{$elements[18]->value ?? null}}</td>    
                         <td colspan="2">{{$elements[19]->value ?? null}}</td>
                     </tr>
                     <tr>
@@ -191,11 +204,13 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>Premium</td>
                         <td>#Losses</td>
                         <td>Liability Losses</td>
-                        <td>PID Losses</td>
+                        <td>PD Losses</td>
                         <td>#Units</td>
                     </tr>
                 </thead>
                 <tbody>
+                
+                    @foreach($businesses as $business)
                     <tr>
                         <td>{{$elements[45]->value ?? null}}</td>
                         <td>{{$elements[46]->value ?? null}}</td>
@@ -207,6 +222,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>{{$elements[52]->value ?? null}}</td>
                         <td>{{$elements[53]->value ?? null}}</td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </article>

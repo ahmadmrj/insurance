@@ -4,7 +4,7 @@
         <label>Auto Liability</label>
         <select name="{{$fields[54]->name}}" class="form-select">
             @foreach ($ol as $key => $val)
-            <option value="{{$key}}">{{$val}}</option>
+            <option value="{{$val}}">{{$val}}</option>
             @endforeach
         </select>
     </div>
