@@ -27,6 +27,12 @@ class FormService
             if (is_array($item)) {
                 $item = array_values($item)[0];
                 foreach ($item as $val) {
+                    // if is attachment
+                    if($key == 71) {
+                        $path = $val->store('drivers');
+                        $val = $path;
+                    }
+
                     $data[] = [
                         'form_id'    => $key,
                         'user_id'    => $userId,
@@ -45,11 +51,10 @@ class FormService
             ];
         }
 
-        foreach ($driversAttachment as $attachment) {
-            $path = $attachment->store('drivers');
-            dd($path);
-        }
-
+        // foreach ($driversAttachment as $attachment) {
+        //     $path = $attachment->store('drivers');
+        //     dd($path);
+        // }
 
         if (isset($data)) {
             if ($model = FormsData::insert($data)) {

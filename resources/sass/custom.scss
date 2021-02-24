@@ -168,7 +168,8 @@ h1 {
         tbody {
             color: $form-values-color;
         }
-        td {
+        td, th {
+            font-weight: normal;
             padding: 3px 10px;
             text-align: center;
             height: 27px;
@@ -213,6 +214,7 @@ h1 {
     body {
         font-size: $font-size-print-default;
         background-color: white;
+        margin: 5mm 5mm 5mm 5mm;
     }
     .tools {
         display: none;
@@ -266,6 +268,11 @@ h1 {
             }
         }    
     }
+    
+    #driver-table{
+       td:last-child {display:none}
+    }
+
     @page {
         size: A4;
     }

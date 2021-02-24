@@ -48,8 +48,10 @@ for ($i = 0; $i < $rowCount; $i++) {
 <div class="print_area">
     <section class="tools">
         <ul>
-            @if (hasAttachment)
-            <li class="download-btn"><i class="bi-cloud-download"></i></li>
+            @if ($elements['driver'][71])
+            <li class="download-btn">
+                <i class="bi-cloud-download"></i>
+            </li>
             @endif
             <li class="print-btn"><i class="bi-printer"></i></li>
         </ul>
@@ -277,10 +279,10 @@ for ($i = 0; $i < $rowCount; $i++) {
 
     <section class="row">
         <article class="col">
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="driver-table">
                 <thead>
                     <tr>
-                        <td colspan="10">SCHEDULE OF DRIVERS</td>
+                        <th colspan="11">SCHEDULE OF DRIVERS</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -295,6 +297,7 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>Hire Date</td>
                         <td>Accident(s)</td>
                         <td>Violation(s)</td>
+                        <td>Attachment(s)</td>
                     </tr>
 
                     @foreach($drivers as $driver)
@@ -310,6 +313,11 @@ for ($i = 0; $i < $rowCount; $i++) {
                         <td>{{$driver[65]->value ?? null}}</td>
                         <td>{{$driver[63]->value ?? null}}</td>
                         <td>{{$driver[64]->value ?? null}}</td>
+                        <td>
+                            <a href="/download/{{$driver[71]->id}}">
+                                <i class="bi-cloud-download"></i>
+                            </a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

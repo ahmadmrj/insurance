@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FormController::class, 'truckingQuickQuote']);
 Route::post('/', [FormController::class, 'submitQuote']);
 Route::get('/view/{hash}', [FormController::class, 'viewForm']);
+Route::get('/download/{id}', [FormController::class, 'downloadAttachment']);
