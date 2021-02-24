@@ -8,7 +8,7 @@
   <div class="col-sm">
     <div class="form-wrapper">
       <h1>TRUCKING QUICK QUOTE</h1>
-      <form method="POST" action="" id="form-validation">
+      <form method="POST" action="" id="form-validation" enctype="multipart/form-data">
           <!-- CROSS Site Request Forgery Protection -->
           @csrf
           <p class="title">SUBMITER INFORMATION</p>

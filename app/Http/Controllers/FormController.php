@@ -7,6 +7,7 @@ use App\Models\States;
 use App\Services\FormDataService;
 use Illuminate\Http\Request;
 use App\Services\FormService;
+use Facade\FlareClient\Http\Response;
 use Illuminate\Support\Facades\Mail;
 
 class FormController extends Controller
@@ -26,7 +27,7 @@ class FormController extends Controller
 
     public function submitQuote(Request $request, FormService $formService)
     {
-        if (!$userId = $formService->save($request->all())) {
+        if (!$userId = $formService->save($request)) {
             abort(500);
         }
 

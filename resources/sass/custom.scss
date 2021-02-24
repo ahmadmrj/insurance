@@ -56,6 +56,15 @@ h1 {
     padding: 20px 30px;
     $shadow-color: #aaa;
     @include box-shadow(3px 2px 4px rgba($shadow-color, .6));
+    label {
+        &.button-upload {
+            margin-top: 30px !important;
+            input[type="file"] {
+                opacity: 0;
+                position: absolute;
+            }
+        }
+    }
     .title {
         font-size: $font-size-normal;
         margin: 40px 0 5px;
@@ -237,6 +246,7 @@ h1 {
             display: none;
         }
         .table {
+            width: 100%;
             td {
                 padding: 0px 10px;
                 height: 20px !important;

@@ -4,6 +4,8 @@ namespace App\Services;
 
 use App\Models\Forms;
 use App\Models\FormsData;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FormService 
 {
@@ -14,11 +16,12 @@ class FormService
         $this->model = $model;
     }
 
-    public function save(Array $formData)
+    public function save(Request $request)
     {
-        $userId    = $this->generateId();
-        $createdAt = new \DateTime();
-        $row       = array_values($formData)[1];
+        $userId            = $this->generateId();
+        $createdAt         = new \DateTime();
+        $driversAttachment = $this->getAttachments('driver', $request);
+        $row               = array_values($request->all())[1];
 
         foreach ($row as $key => $item) {
             if (is_array($item)) {
@@ -42,6 +45,12 @@ class FormService
             ];
         }
 
+        foreach ($driversAttachment as $attachment) {
+            $path = $attachment->store('drivers');
+            dd($path);
+        }
+
+
         if (isset($data)) {
             if ($model = FormsData::insert($data)) {
                 return $userId;
@@ -49,6 +58,19 @@ class FormService
         }
 
         return false;
+    }
+
+    private function getAttachments($key, Request $request)
+    {
+        $attachments = $request->file('trucking_quick_quote');
+
+        foreach ($attachments as $attachment) {
+            if (isset($attachment[$key])) {
+                return $attachment[$key];
+            }
+        }
+
+        return [];
     }
 
     public function getFormByName($name)

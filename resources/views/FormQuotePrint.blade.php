@@ -48,6 +48,9 @@ for ($i = 0; $i < $rowCount; $i++) {
 <div class="print_area">
     <section class="tools">
         <ul>
+            @if (hasAttachment)
+            <li class="download-btn"><i class="bi-cloud-download"></i></li>
+            @endif
             <li class="print-btn"><i class="bi-printer"></i></li>
         </ul>
     </section>
