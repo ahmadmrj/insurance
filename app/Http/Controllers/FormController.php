@@ -33,7 +33,7 @@ class FormController extends Controller
 
         $hash = base64_encode(serialize(['user' => $userId]));
         
-        Mail::to(config('mail.from.address'))->send(new TruckingQuote($hash));
+        // Mail::to(config('mail.from.address'))->send(new TruckingQuote($hash));
 
         return view("FormSubmitted", ['url' => url("/view/{$hash}")]);
     }
