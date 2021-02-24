@@ -13544,6 +13544,15 @@ h1,
   box-shadow: 3px 2px 4px rgba(170, 170, 170, 0.6);
 }
 
+.form-wrapper label.button-upload {
+  margin-top: 30px !important;
+}
+
+.form-wrapper label.button-upload input[type=file] {
+  opacity: 0;
+  position: absolute;
+}
+
 .form-wrapper .title {
   font-size: 12pt;
   margin: 40px 0 5px;
@@ -13746,6 +13755,10 @@ h1,
 
   .print_area .print-btn {
     display: none;
+  }
+
+  .print_area .table {
+    width: 100%;
   }
 
   .print_area .table td {

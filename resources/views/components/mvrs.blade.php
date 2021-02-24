@@ -52,7 +52,7 @@
             <div class="col-sm">
                 <label>{{$fields[62]->alias}}</label>
                 <div class="input-group">
-                    <input name="{{$fields[62]->name}}" type="text" class="form-control date" autocomplete="off" data-provide="datepicker" required />
+                    <input name="{{$fields[62]->name}}" type="text" class="form-control date" autocomplete="off" data-provide="datepicker" />
                     <span class="input-group-text"><i class="bi-calendar-date"></i></span>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 <input name="{{$fields[64]->name}}" type="number" class="form-control" maxlength="2" />
             </div>
             <div class="col-sm-1 d-flex align-items-center justify-content-center button-group">
-                <span class="button button-upload" title="Upload Attachment"><i class="bi-upload"></i></span>
+                <label class="button button-upload" title="Upload Attachment"><i class="bi-upload"></i><input type="file" name="{{$fields[71]->name}}" /></label>
                 <span class="button button-remove" title="Remove"><i class="bi-x-circle"></i></span>
             </div>
         </div>

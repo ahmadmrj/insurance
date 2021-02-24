@@ -113,7 +113,7 @@ class FormsSeeder extends Seeder
 
             ['template' => $template, 'name' => null, 'alias' => 'Entity type', 'values' => json_encode(['LLC', 'INC', 'DBA', 'LLP', 'GP', 'SB']), 'multiple' => false,'group_id' => null],
 
-
+            ['template' => $template, 'name' => null, 'alias' => 'attachment', 'values' => null, 'multiple' => true, 'group_id' => 'driver'],
         ]);
             
     }
